@@ -133,7 +133,7 @@
                   <h3 style="margin-left: 88px;">No hay productos cargados</h3>
                 @endforelse
 
-                {{ $products->render() }}
+                
               </div>
 
 

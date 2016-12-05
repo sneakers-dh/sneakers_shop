@@ -4,7 +4,7 @@
 <html>
   <head>
     <link rel="shortcut icon" href="../TrabajoIntegrador/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../TrabajoIntegrador/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles1.css">
@@ -54,16 +54,19 @@
 
         <!-- barra de navegacion -->
 
-              <div class="barra-navegacion">
-                <ul>
-                  <li><a class="llamar-categoria">CATEGORIAS</a></li>
-    							<li><a href="">HOMBRES</a></li>
-    							<li><a href="">MUJERES</a></li>
-                  <li><a href="">MARCAS</a></li>
-    							<li><a href="products">PRODUCTOS</a></li>
-                  <li><a href="products/create">VENDER AHORA</a></li>
-                </ul>
-              </div>
+        <div class="barra-navegacion">
+          <ul>
+            <li><a class="llamar-categoria">CATEGORIAS</a></li>
+            <li><a href="products/zapatillas">ZAPATILLAS</a></li>
+            <li><a href="products/zapatos">ZAPATOS</a></li>
+            <li><a href="products/ojotas">OJOTAS</a></li>
+            <li><a href="products/sandalias">SANDALIAS</a></li>
+            <li><a href="products/botas">BOTAS</a></li>
+            <li><a href="products/botines">BOTINES</a></li>
+            <li><a href="products">PRODUCTOS</a></li>
+            <li><a href="products/create">VENDER AHORA</a></li>
+          </ul>
+        </div>
 
              <!-- CATEGORIAS -->
              <div class="container-categoria" style="display: none;">
@@ -72,53 +75,78 @@
     		         <div class="zapatillas">
     		           <p class="titulo"><a href="products/zapatillas" style="color: white;">Zapatillas</a></p>
     		           <ul class="lista">
-    		             <li><a href="#">Hombres</a></li>
-    		             <li><a href="#">Mujeres</a></li>
-    		             <li><a href="#">Niños</a></li>
+                     <li><a href="#">Goma</a></li>
+    		             <li><a href="#">Gamuza</a></li>
+    		             <li><a href="#">Cuero</a></li>
+                     <li><a href="#">Cuerina</a></li>
+                     <li><a href="#">Algodon</a></li>
+                     <li><a href="#">Lona</a></li>
+                     <li><a href="#">Malla</a></li>
     		           </ul>
     		         </div>
 
     		         <div class="zapatos">
     		           <p class="titulo"><a href="products/zapatos" style="color: white;">Zapatos</a></p>
     		           <ul class="lista">
-    		             <li><a href="#">Hombres</a></li>
-    		             <li><a href="#">Mujeres</a></li>
-    		             <li><a href="#">Niños</a></li>
+                     <li><a href="#">Goma</a></li>
+    		             <li><a href="#">Gamuza</a></li>
+    		             <li><a href="#">Cuero</a></li>
+                     <li><a href="#">Cuerina</a></li>
+                     <li><a href="#">Algodon</a></li>
+                     <li><a href="#">Lona</a></li>
+                     <li><a href="#">Malla</a></li>
     		           </ul>
     		         </div>
 
     		         <div class="deportes">
     		          <p class="titulo"><a href="products/ojotas" style="color: white;">Ojotas</a></p>
     		          <ul class="lista">
-    		            <li><a href="#">Hombres</a></li>
-    		            <li><a href="#">Mujeres</a></li>
-    		            <li><a href="#">Niños</a></li>
+                    <li><a href="#">Goma</a></li>
+                    <li><a href="#">Gamuza</a></li>
+                    <li><a href="#">Cuero</a></li>
+                    <li><a href="#">Cuerina</a></li>
+                    <li><a href="#">Algodon</a></li>
+                    <li><a href="#">Lona</a></li>
+                    <li><a href="#">Malla</a></li>
     		          </ul>
     		         </div>
 
     		         <div class="moda">
     		          <p class="titulo"><a href="products/sandalias" style="color: white;">Sandalias</a></p>
     		          <ul class="lista">
-                    <li><a href="#">Hombres</a></li>
-    		            <li><a href="#">Mujeres</a></li>
-    		            <li><a href="#">Niños</a></li>
+                    <li><a href="#">Goma</a></li>
+                    <li><a href="#">Gamuza</a></li>
+                    <li><a href="#">Cuero</a></li>
+                    <li><a href="#">Cuerina</a></li>
+                    <li><a href="#">Algodon</a></li>
+                    <li><a href="#">Lona</a></li>
+                    <li><a href="#">Malla</a></li>
     		          </ul>
     		         </div>
 
     		         <div class="running">
     		           <p class="titulo"><a href="products/botas" style="color: white;">Botas</a></p>
     		           <ul class="lista">
-    		             <li><a href="#">Hombres</a></li>
-    		             <li><a href="#">Mujeres</a></li>
+                     <li><a href="#">Goma</a></li>
+    		             <li><a href="#">Gamuza</a></li>
+    		             <li><a href="#">Cuero</a></li>
+                     <li><a href="#">Cuerina</a></li>
+                     <li><a href="#">Algodon</a></li>
+                     <li><a href="#">Lona</a></li>
+                     <li><a href="#">Malla</a></li>
     		           </ul>
     		         </div>
 
                  <div class="running">
     		           <p class="titulo"><a href="products/botines" style="color: white;">Botines</a></p>
     		           <ul class="lista">
-                     <li><a href="#">Hombres</a></li>
-     		            <li><a href="#">Mujeres</a></li>
-     		            <li><a href="#">Niños</a></li>
+                     <li><a href="#">Goma</a></li>
+    		             <li><a href="#">Gamuza</a></li>
+    		             <li><a href="#">Cuero</a></li>
+                     <li><a href="#">Cuerina</a></li>
+                     <li><a href="#">Algodon</a></li>
+                     <li><a href="#">Lona</a></li>
+                     <li><a href="#">Malla</a></li>
     		           </ul>
     		         </div>
 
@@ -148,98 +176,115 @@
     			      </ul>
     					</div>
 
-    		<!-- ultimas publicaciones -->
+              <!-- ultimas publicaciones -->
 
-              <h1 class="title">Últimas Publicaciones</h1>
+              <h1 class="title">Zapatillas</h1>
               <div class="ultimas-publicaciones">
+                @forelse ($zapatillas as $zapatilla)
                 <div class="seccion" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px">
-                <img src="../TrabajoIntegrador/images/index/secciones/nike.jpg" class="imagen-seccion" />
-                <p class="titulos-imagen" /> Zapatillas Nike Priority Low</p>
-                <p class="precio">$1369,00</p>
+                  <img src="" class="imagen-seccion" />
+                  <p class="titulos-imagen" />{{ $zapatilla->name}}</p>
+                  <p class="precio">${{ $zapatilla->price }}</p>
                 </div>
-                <div class="seccion">
-                  <img src="../TrabajoIntegrador/images/index/secciones/adidas.jpg" class="imagen-seccion" />
-                  <p class="titulos-imagen" /> Zapatillas Adidas Neo Park St</p>
-                  <p class="precio">$1249,00</p>
-                </div>
-                <div class="seccion">
-                  <img src="../TrabajoIntegrador/images/index/secciones/nike.jpg" class="imagen-seccion" />
-                  <p class="titulos-imagen" /> Zapatillas Nike Priority Low</p>
-                  <p class="precio">$1369,00</p>
-                </div>
-                <div class="seccion">
-                  <img src="../TrabajoIntegrador/images/index/secciones/adidas.jpg" class="imagen-seccion" />
-                  <p class="titulos-imagen" /> Zapatillas Adidas Neo Park St</p>
-                  <p class="precio">$1249,00</p>
-                </div>
-                <div class="seccion" style="  border-top-right-radius: 15px;  border-bottom-right-radius: 15px;">
-                  <img src="../TrabajoIntegrador/images/index/secciones/nike.jpg" class="imagen-seccion" />
-                  <p class="titulos-imagen" /> Zapatillas Nike Priority Low</p>
-                  <p class="precio">$1369,00</p>
-                </div>
+              @empty
+              <div class="no-hay-productos">
+                <p>
+                  No hay productos cargados
+                </p>
+              </div>
+              @endforelse
               </div>
 
-        <!-- mas vistos -->
-              <h1 class="title">Más visitados</h1>
-              <div class="mas-vistos">
+              <!--  Zapatos -->
+              <h1 class="title">Zapatos</h1>
+              <div class="ultimas-publicaciones">
+              @forelse ($zapatos as $zapato)
                 <div class="seccion" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px">
-                  <img src="../TrabajoIntegrador/images/index/secciones/converse.jpg" class="imagen-seccion" />
-                  <p class="titulos-imagen" /> Zapatillas Converse Gates Ox Cnvs</p>
-                  <p class="precio">$1610,00</p>
+                  <img src="" class="imagen-seccion" />
+                  <p class="titulos-imagen" />{{ $zapato->name}}</p>
+                  <p class="precio">${{ $zapato->price }}</p>
                 </div>
-                <div class="seccion">
-                  <img src="../TrabajoIntegrador/images/index/secciones/pumas.jpg" class="imagen-seccion"/>
-                  <p class="titulos-imagen" /> Zapatillas Puma Sequence V2</p>
-                  <p class="precio">$1349,00</p>
-                </div>
-                <div class="seccion">
-                  <img src="../TrabajoIntegrador/images/index/secciones/converse.jpg" class="imagen-seccion" />
-                  <p class="titulos-imagen" /> Zapatillas Converse Gates Ox Cnvs</p>
-                  <p class="precio">$1610,00</p>
-                </div>
-                <div class="seccion">
-                  <img src="../TrabajoIntegrador/images/index/secciones/pumas.jpg" class="imagen-seccion"/>
-                  <p class="titulos-imagen" /> Zapatillas Puma Sequence V2</p>
-                  <p class="precio">$1349,00</p>
-                </div>
-                <div class="seccion" style="  border-top-right-radius: 15px;  border-bottom-right-radius: 15px;">
-                  <img src="../TrabajoIntegrador/images/index/secciones/converse.jpg" class="imagen-seccion" />
-                  <p class="titulos-imagen" /> Zapatillas Converse Gates Ox Cnvs</p>
-                  <p class="precio">$1610,00</p>
-                </div>
+              @empty
+              <div class="no-hay-productos">
+                <p>
+                  No hay productos cargados
+                </p>
+              </div>
+              @endforelse
               </div>
 
-        <!-- ultimo visitado -->
-              <h1 class="title">Ultimos Visitados</h1>
-              <div class="ultimo-visitado">
+        <!-- ojotas -->
+              <h1 class="title">Ojotas</h1>
+              <div class="ultimas-publicaciones">
+              @forelse ($ojotas as $ojota)
                 <div class="seccion" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px">
-                  <img src="../TrabajoIntegrador/images/index/secciones/ojotas-puma.jpg" class="imagen-seccion" />
-                  <p class="titulos-imagen" /> Ojotas Puma Cat Slide Ts Dp</p>
-                  <p class="precio">$467,00</p>
+                  <img src="" class="imagen-seccion" />
+                  <p class="titulos-imagen" />{{ $ojota->name}}</p>
+                  <p class="precio">${{ $ojota->price }}</p>
                 </div>
-                <div class="seccion">
-                  <img src="../TrabajoIntegrador/images/index/secciones/crocs.jpg" class="imagen-seccion" />
-                  <p class="titulos-imagen" /> Zapatillas Crocs Walu Canvas Loafer</p>
-                  <p class="precio">$794,25</p>
-                </div>
-                <div class="seccion">
-                  <img src="../TrabajoIntegrador/images/index/secciones/ojotas-puma.jpg" class="imagen-seccion" />
-                  <p class="titulos-imagen" /> Ojotas Puma Cat Slide Ts Dp</p>
-                  <p class="precio">$467,00</p>
-                </div>
-                <div class="seccion">
-                  <img src="../TrabajoIntegrador/images/index/secciones/crocs.jpg" class="imagen-seccion" />
-                  <p class="titulos-imagen" /> Zapatillas Crocs Walu Canvas Loafer</p>
-                  <p class="precio">$794,25</p>
-                </div>
-                <div class="seccion" style="  border-top-right-radius: 15px;  border-bottom-right-radius: 15px;">
-                  <img src="../TrabajoIntegrador/images/index/secciones/ojotas-puma.jpg" class="imagen-seccion" />
-                  <p class="titulos-imagen" /> Ojotas Puma Cat Slide Ts Dp</p>
-                  <p class="precio">$467,00</p>
-                </div>
+              @empty
+              <div class="no-hay-productos">
+                <p>
+                  No hay productos cargados
+                </p>
+              </div>
+              @endforelse
               </div>
 
-          </div>
+              <!-- sandalias -->
+              <h1 class="title">Sandalias</h1>
+              <div class="ultimas-publicaciones">
+              @forelse ($sandalias as $sandalia)
+                <div class="seccion" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px">
+                  <img src="" class="imagen-seccion" />
+                  <p class="titulos-imagen" />{{ $sandalia->name}}</p>
+                  <p class="precio">${{ $sandalia->price }}</p>
+                </div>
+              @empty
+              <div class="no-hay-productos">
+                <p>
+                  No hay productos cargados
+                </p>
+              </div>
+              @endforelse
+              </div>
+
+              <!-- botas -->
+              <h1 class="title">Botas</h1>
+              <div class="ultimas-publicaciones">
+              @forelse ($botas as $bota)
+                <div class="seccion" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px">
+                  <img src="" class="imagen-seccion" />
+                  <p class="titulos-imagen" />{{ $bota->name}}</p>
+                  <p class="precio">${{ $bota->price }}</p>
+                </div>
+              @empty
+              <div class="no-hay-productos">
+                <p>
+                  No hay productos cargados
+                </p>
+              </div>
+              @endforelse
+              </div>
+
+              <!-- botines -->
+              <h1 class="title">Botines</h1>
+              <div class="ultimas-publicaciones">
+              @forelse ($botines as $botin)
+                <div class="seccion" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px">
+                  <img src="" class="imagen-seccion" />
+                  <p class="titulos-imagen" />{{ $botin->name}}</p>
+                  <p class="precio">${{ $botin->price }}</p>
+                </div>
+              @empty
+              <div class="no-hay-productos">
+                <p>
+                  No hay productos cargados
+                </p>
+              </div>
+              @endforelse
+              </div>
+              
           <!-- pie de pagina -->
             <footer class="pie">
               <ul>

@@ -9,7 +9,7 @@ if (Auth::guest()) {
 <html>
   <head>
     <link rel="shortcut icon" href="../TrabajoIntegrador/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../TrabajoIntegrador/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles1.css">
@@ -61,28 +61,31 @@ if (Auth::guest()) {
         </header>
 
         <div class="container">
-    <form action="/products" method="post" class="form-horizontal" style="margin-left: 28%; margin-top: 3%;">
+    <form id="formulario" action="/products" method="post" class="form-horizontal" style="margin-left: 28%; margin-top: 3%;">
       {{ csrf_field() }}
       {{ method_field('post') }}
 
       <div class="form-group">
         <label for="name">Nombre</label>
-        <input type="text" name="name" value="{{ old('name') }}" class="form-control" style="width:65%">
+        <input id="titulo" type="text" name="name" value="{{ old('name') }}" class="form-control" style="width:65%">
+        <p id="carteltitulo" style="display:block; color: red;font-size:17px;"></p>
       </div>
 
       <div class="form-group">
         <label for="price">Precio</label>
-        <input type="text" name="price" value="{{ old('price') }}" class="form-control" style="width:65%">
+        <input id="precio" type="text" name="price" value="{{ old('price') }}" class="form-control" style="width:65%">
+        <p id="cartelprecio" style="display:block; color: red;font-size:17px;"></p>
       </div>
 
       <div class="form-group">
-        <label for="description">Descripción</label>
-        <textarea name="description" rows="10" class="form-control" style="width:65%">{{ old('description') }}</textarea>
+        <label for="description">Descripción</label> <span style="margin-left: 42%">Caracteres:<input type="text" name="remLen" style="width: 42px" value="280" readonly></span>
+        <textarea name="description" rows="10" class="form-control" style="width:65%" id="descripcion" onkeydown="contador(this.form.description,this.form.remLen,280);" onkeyup="contador(this.form.description,this.form.remLen,280);">{{ old('description') }}</textarea>
+        <p id="carteldescripcion" style="display:block; color: red;font-size:17px;"></p>
       </div>
 
       <div class="form-group">
         <label for="name">Categoría</label>
-        <select name="category_id" class="form-control" style="width:65%;">
+        <select name="category_id" class="form-control" style="width:65%;" required>
             @foreach ($categories as $category)
                 <option value="{{$category->id}}">{{$category->value}}</option>
             @endforeach
@@ -121,6 +124,6 @@ if (Auth::guest()) {
             </ul>
           </footer>
 
-
+          <script src="/js/validacion-formulario-creacion.js"></script>
   </body>
 </html>

@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="shortcut icon" href="../TrabajoIntegrador/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../TrabajoIntegrador/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles1.css">
@@ -75,6 +74,15 @@
 
       <div class="contenedor-show">
         <div class="contenedor-imagen">
+        @forelse($product->images as $image)
+          <div class="col-md-6">
+            <img src="/content/{{ $image->src }}" alt="{{ $product->name }}" class="img-responsive" />
+          </div>
+        @empty
+          <h4 style="text-align: center; position: relative; top: 140px;">
+            No hay imágenes cargadas.
+          </h4>
+        @endforelse
           <div class="categorias">
             <h4 style="margin-top:4px; margin-left: 10px">Categoría</h4>
             <p style="margin-left: 10px">{{ $product->category->value }}</p>

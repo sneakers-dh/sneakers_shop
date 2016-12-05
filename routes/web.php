@@ -19,10 +19,6 @@ Route::get('/', 'SneakersController@index' );
 /* CONTROLADOR FAQ */
 Route::get('ayuda', 'SneakersController@help' );
 
-// Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function(){
-// Route::resource('products', 'ProductsController');
-// });
-
 /*CONTROLADOR REGISTER */
 Auth::routes();
 
@@ -44,3 +40,4 @@ Route::get('products/botas', 'SneakersController@botas');
 Route::get('products/botines', 'SneakersController@botines');
 
 Route::resource('products', 'ProductsController');
+Route::post('products/{id}/images', 'ProductsController@images');

@@ -3,7 +3,7 @@
 <html>
   <head>
     <link rel="shortcut icon" href="../TrabajoIntegrador/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../TrabajoIntegrador/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles1.css">
@@ -116,34 +116,27 @@
 
 
         <div class="container">
-            <h1>Listado de productos</h1>
+            <h1 style="margin-left: 88px;">Listado de productos</h1>
 
-            <table class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                  <th>Nombre</th>
-                  <th>Categoría</th>
-                  <th>Precio</th>
-                  <th>Materiales</th>
-                </tr>
-              </thead>
-              <tbody>
                 @forelse($products as $product)
-                  <tr>
-                    <td><a href="/products/{{$product->id}}">{{ $product->name }}</a></td>
-                    <td>{{ $product->category->value }}</td>
-                    <td>{{ $product->price }}</td>
-                    <td>{{ $product->materials()->pluck('value')->implode(', ') }}</td>
-                  </tr>
-                @empty
-                  <tr>
-                    <td colspan="5">No hay productos cargados</td>
-                  </tr>
-                @endforelse
-                </tbody>
-              </table>
+                  <div class="cuerpo">
+                    <img class="imgproducto" src="" alt="">
+                    <p class="tituloproducto"><a href="/products/{{$product->id}}">{{ $product->name }}</a></p>
+                    <p class="precioproducto">${{ $product->price }}</p>
+                    <p class="categoriaproducto">Categoria: {{ $product->category->value }}</p>
+                    <p class="material">Materiales: {{ $product->materials()->pluck('value')->implode(', ') }}</p>
+                    <a href="/products/{{$product->id}}" class="masinformacion">Ver detalles</a>
 
-          </div>
+                    <button type="button" name="Editar" class="botonproducto">Comprar</button>
+
+                @empty
+                  <h3 style="margin-left: 88px;">No hay productos cargados</h3>
+                @endforelse
+
+                {{ $products->render() }}
+              </div>
+
+
 
           <!-- pie de pagina -->
             <footer class="pie">

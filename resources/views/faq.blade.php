@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="shortcut icon" href="../TrabajoIntegrador/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../TrabajoIntegrador/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/styles3.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -61,7 +61,7 @@
             <div style="border-bottom: 1px solid white; border-top: 1px solid white;" class="pregunta">
               <p style="font-size:16px;">-¿Necesito registrarme para comprar y vender en Sneakers-Shop?</p>
               <div class="pregunta-respuesta" style="display: none;">
-                  <p>Para poder realizar compras, ventas e incluso realizar preguntas al vendedor hay que tener una cuenta en Sneakers-Shop. Puedes crearte una <a href="register" style="font-size:15px; text-decoration:none; color: #16aa56;" target="new">aca</a>.</p>
+                  <p>Para poder realizar compras, ventas e incluso realizar preguntas al vendedor hay que tener una cuenta en Sneakers-Shop. Puedes crearte una <a href="register" style="font-size:15px; color: #005224;" target="new">aca</a>.</p>
               </div>
             </div>
 
@@ -71,8 +71,8 @@
                 <p>Para publicar un anuncio realiza los siguientes pasos:
                 <ol>
                   <li>Hacé click en “Vender ahora”.</li>
-                  <li>Completá la información sobre tu artículo (título, categoría, descripción, precio, fotos)</li>
-                  <li>Una vez que hayas terminado, hacé click en “Publicar”</li></p>
+                  <li>Completá la información sobre tu artículo (título, categoría, descripción, materiales, precio, fotos).</li>
+                  <li>Una vez que hayas terminado, hacé click en “Publicar”.</li></p>
                 </ol>
               </div>
             </div>
@@ -94,8 +94,8 @@
               <div class="pregunta-respuesta4" style="display: none;">
                 <p>Para editar un anuncio realiza los siguientes pasos:
                 <ol>
-                  <li>Ve a la pestaña "Mi Cuenta" y accede a la seccion "Mis Publicaciones".</li>
-                  <li>En esta seccion aparecera una lista de todos las publicaciones que hayas creado y en la parte derecha de cada uno aparecera un icono para poder editarlo.</li></p>
+                  <li>Ve a la pestaña en la que aparece tu nombre de cuenta y accede a la seccion "Mis Publicaciones".</li>
+                  <li>En esta seccion aparecera una lista de todos las publicaciones que hayas creado y en la parte derecha de cada uno aparecera un boton para poder editarlo.</li></p>
                 </ol>
               </div>
             </div>
@@ -105,7 +105,7 @@
               <div class="pregunta-respuesta5" style="display: none;">
                 <p>Para eliminar un anuncio realiza los siguientes pasos:
                 <ol>
-                  <li>Ve a la pestaña "Mi Cuenta" y accede a la seccion "Mis Publicaciones".</li>
+                  <li>Ve a la pestaña en la que aparece tu nombre de cuenta y accede a la seccion "Mis Publicaciones".</li>
                   <li>En esta seccion aparecera una lista de todas las publicaciones que hayas creado y en la parte derecha de cada uno aparecera un icono para poder eliminarlo.</li></p>
                 </ol>
               </div>

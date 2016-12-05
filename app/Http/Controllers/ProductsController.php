@@ -17,7 +17,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
-      $products = Product::visibles()->get();
+      $products = Product::visibles()->orderBy('id', 'DESC')->get();
+      $products = Product::paginate(10);
       return view('products.index', compact('products'));
     }
 
@@ -96,5 +97,19 @@ class ProductsController extends Controller
       $product->save();
 
       return redirect('publicaciones');
+    }
+
+    public function images(Request $request, $id)
+    {
+      //guardo el archivo
+      $product = Product::find($id);
+      $file = $request->file('file');
+      $ext = $file->extension();
+      $name = uniqid();
+      $file->storeAs('images/products-'.$product->id, $name.'.'.$ext);
+
+      //persiste en base
+      $image = new \App\Image(['src' => 'images/products-'.$product->id.'/'.$name.'.'.$ext]);
+      $product->images()->save($image);
     }
 }

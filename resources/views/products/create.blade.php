@@ -36,24 +36,17 @@ if (Auth::guest()) {
               @endif
               <li><a href="../ayuda" target="new" class="faq">Ayuda</a></li>
               <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                      {{ Auth::user()->name }} <span class="caret"></span>
-                  </a>
-
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu" style="margin-top: 4px; margin-left: -42px">
                       <li><a href="/publicaciones" style="background-color: white;">Mis Publicaciones</a></li>
-                          <li role="presentation" class="divider" style="display: block;"></li>
+                      <li role="presentation" class="divider" style="display: block;"></li>
                       <li>
                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                         </form>
                           <a href="{{ url('/logout') }}" style="background-color: white;"
-                              onclick="event.preventDefault();
-                                       document.getElementById('logout-form').submit();">
-                              Logout
-                          </a>
+                          onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                       </li>
-
                   </ul>
               </li>
             </ul>
@@ -61,60 +54,60 @@ if (Auth::guest()) {
         </header>
 
         <div class="container">
-    <form id="formulario" action="/products" method="post" class="form-horizontal" style="margin-left: 28%; margin-top: 3%;" enctype="multipart/form-data">
-      {{ csrf_field() }}
-      {{ method_field('post') }}
+          <form id="formulario" action="/products" method="post" class="form-horizontal" style="margin-left: 28%; margin-top: 3%;" enctype="multipart/form-data">
+            {{ csrf_field() }}
+            {{ method_field('post') }}
 
-      <div class="form-group">
-        <label for="name">Nombre</label>
-        <input id="titulo" type="text" name="name" value="{{ old('name') }}" class="form-control" style="width:65%">
-        <p id="carteltitulo" style="display:block; color: red;font-size:17px;"></p>
-      </div>
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input id="titulo" type="text" name="name" value="{{ old('name') }}" class="form-control" style="width:65%">
+              <p id="carteltitulo" style="display:block; color: red;font-size:17px;"></p>
+            </div>
 
-      <div class="form-group">
-        <label for="price">Precio</label>
-        <input id="precio" type="text" name="price" value="{{ old('price') }}" class="form-control" style="width:65%">
-        <p id="cartelprecio" style="display:block; color: red;font-size:17px;"></p>
-      </div>
+            <div class="form-group">
+              <label for="price">Precio</label>
+              <input id="precio" type="text" name="price" value="{{ old('price') }}" class="form-control" style="width:65%">
+              <p id="cartelprecio" style="display:block; color: red;font-size:17px;"></p>
+            </div>
 
-      <div class="form-group">
-        <label for="description">Descripción</label> <span style="margin-left: 42%">Caracteres:<input type="text" name="remLen" style="width: 42px" value="280" readonly></span>
-        <textarea name="description" rows="10" class="form-control" style="width:65%" id="descripcion" onkeydown="contador(this.form.description,this.form.remLen,280);" onkeyup="contador(this.form.description,this.form.remLen,280);">{{ old('description') }}</textarea>
-        <p id="carteldescripcion" style="display:block; color: red;font-size:17px;"></p>
-      </div>
+            <div class="form-group">
+              <label for="description">Descripción</label> <span style="margin-left: 42%">Caracteres:<input type="text" name="remLen" style="width: 42px" value="280" readonly></span>
+              <textarea name="description" rows="10" class="form-control" style="width:65%" id="descripcion" onkeydown="contador(this.form.description,this.form.remLen,280);" onkeyup="contador(this.form.description,this.form.remLen,280);">{{ old('description') }}</textarea>
+              <p id="carteldescripcion" style="display:block; color: red;font-size:17px;"></p>
+            </div>
 
-      <div class="form-group">
-        <label for="name">Categoría</label>
-        <select name="category_id" class="form-control" style="width:65%;" required>
-            @foreach ($categories as $category)
-                <option value="{{$category->id}}">{{$category->value}}</option>
-            @endforeach
-        </select>
-      </div>
+            <div class="form-group">
+              <label for="name">Categoría</label>
+              <select name="category_id" class="form-control" style="width:65%;" required>
+                @foreach ($categories as $category)
+                  <option value="{{$category->id}}">{{$category->value}}</option>
+                @endforeach
+              </select>
+            </div>
 
-      <div class="form-group">
-        <label for="name">Materiales</label>
-        <br>
-            @foreach ($materials as $material)
-              <div>
-                <input type="checkbox" name="materials[]" value="{{$material->id}}" id="check{{$material->id}}"><label for="check{{$material->id}}">{{$material->value}}</label>
+            <div class="form-group">
+              <label for="name">Materiales</label>
+              <br>
+                @foreach ($materials as $material)
+                  <div>
+                    <input type="checkbox" name="materials[]" value="{{$material->id}}" id="check{{$material->id}}"><label for="check{{$material->id}}">{{$material->value}}</label>
+                  </div>
+                @endforeach
+            </div>
+            <label for="name">Imagenes</label>
+
+            <div class="form-group">
+              <div class="fallback">
+                <input name="file" type="file" multiple />
               </div>
-            @endforeach
-      </div>
-      <label for="name">Imagenes</label>
+            </div>
 
-      <div class="form-group">
-          <div class="fallback">
-            <input name="file" type="file" multiple />
-          </div>
-      </div>
-
-      <div class="form-group">
-        <input type="submit" name="enviar" value="Publicar" class="btn btn-primary" style="background-color: #FCFFCC; color: black; border-color: #FCFFCC">
-        <input type="reset" name="reset" value="Limpiar Campos" class="btn btn-primary" style="background-color: #FCFFCC; color: black; border-color: #FCFFCC">
-      </div>
-    </form>
-  </div>
+            <div class="form-group">
+              <input type="submit" name="enviar" value="Publicar" class="btn btn-primary" style="background-color: #FCFFCC; color: black; border-color: #FCFFCC">
+              <input type="reset" name="reset" value="Limpiar Campos" class="btn btn-primary" style="background-color: #FCFFCC; color: black; border-color: #FCFFCC">
+            </div>
+          </form>
+        </div>
 
 
 
@@ -130,6 +123,5 @@ if (Auth::guest()) {
             </ul>
           </footer>
 
-          <script src="/js/validacion-formulario-creacion.js"></script>
   </body>
 </html>

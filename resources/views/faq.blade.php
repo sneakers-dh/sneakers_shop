@@ -198,7 +198,7 @@
             <ul>
               <span style="font-size: 15px; float: left; margin-top: 4px;color: black;">&copy; 2016 SneakerShop.com</span>
               <li><a href="home">Home</a></li>
-              <li style="border-right: none;"><a href="registro.php">Registro</a></li>
+              <li style="border-right: none;"><a href="register">Registro</a></li>
               <a target="_blank" href="https://twitter.com/"><img src="images/index/icon-twitter.ico" class="icon-twitter"/></a>
               <a target="_blank" href="https://www.facebook.com/"><img src="images/index/icon-facebook.ico" class="icon-facebook"/></a>
             </ul>

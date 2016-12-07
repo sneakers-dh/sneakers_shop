@@ -118,24 +118,12 @@
           </div>
         @endforeach
       </div>
-
-      <div class="form-group">
-        <label for="name">Imagenes</label>
-        <form action="/products/{{$product->id}}/images" class="dropzone" method="post">
-          {{ csrf_field() }}
-          <div class="fallback">
-            <input name="file" type="file" multiple />
-          </div>
-
-      </div>
-
-
       <div class="form-group">
         <input type="submit" name="enviar" value="Publicar" class="btn btn-primary" style="background-color: #FCFFCC; color: black; border-color: #FCFFCC">
         <input type="reset" name="reset" value="Limpiar Campos" class="btn btn-primary" style="background-color: #FCFFCC; color: black; border-color: #FCFFCC">
       </div>
     </form>
-    </form>
+
   </div>
 
   <!-- pie de pagina -->

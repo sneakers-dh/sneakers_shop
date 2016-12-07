@@ -61,7 +61,7 @@ if (Auth::guest()) {
         </header>
 
         <div class="container">
-    <form id="formulario" action="/products" method="post" class="form-horizontal" style="margin-left: 28%; margin-top: 3%;">
+    <form id="formulario" action="/products" method="post" class="form-horizontal" style="margin-left: 28%; margin-top: 3%;" enctype="multipart/form-data">
       {{ csrf_field() }}
       {{ method_field('post') }}
 
@@ -101,12 +101,18 @@ if (Auth::guest()) {
               </div>
             @endforeach
       </div>
+      <label for="name">Imagenes</label>
+
+      <div class="form-group">
+          <div class="fallback">
+            <input name="file" type="file" multiple />
+          </div>
+      </div>
 
       <div class="form-group">
         <input type="submit" name="enviar" value="Publicar" class="btn btn-primary" style="background-color: #FCFFCC; color: black; border-color: #FCFFCC">
         <input type="reset" name="reset" value="Limpiar Campos" class="btn btn-primary" style="background-color: #FCFFCC; color: black; border-color: #FCFFCC">
       </div>
-
     </form>
   </div>
 

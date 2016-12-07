@@ -22,8 +22,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+      $products = Product::name($request->get('name'))->visibles()->orderBy('id', 'DESC')->paginate(10);
+
       $zapatillas = Product::visibles()->where('category_id', 1)->limit(5)->orderBy('id','desc')->get();
       $zapatos = Product::visibles()->where('category_id', 2)->limit(5)->orderBy('id','desc')->get();
       $ojotas = Product::visibles()->where('category_id', 3)->limit(5)->orderBy('id','desc')->get();

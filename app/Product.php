@@ -24,8 +24,14 @@ class Product extends Model
     return $this->belongsToMany('App\Material');
   }
 
-  public function scopeVisibles($query)
-  {
+  public function scopeVisibles($query){
     $query->where('visible', 1);
+  }
+
+  public function scopeName($query, $name) {
+    if (trim($name) != "") {
+      $query->where('name', 'LIKE', "%$name%");
+    }
+
   }
 }

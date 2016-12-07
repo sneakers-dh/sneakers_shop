@@ -347,12 +347,16 @@ table td {
   margin-top: 1%;
 }
 
+.titulos-imagen a {
+  color:black;
+}
+
 .title {
   margin-top: 30px;
   margin-bottom: -15px;
   font-size: 18px;
   text-align: center;
-  color: #16aa56;
+  color: #2b3752;
   font-family: monospace;
   padding: 10px;
 }
@@ -553,6 +557,11 @@ input:-ms-input-placeholder {
   height: 121px;
 }
 
+.img-seccion {
+  width: 254px;
+  height: 282px;
+}
+
 .tituloproducto{
   color: #164360;
   font-size: 25px;
@@ -596,7 +605,7 @@ input:-ms-input-placeholder {
   font-size: 15px;
   float: right;
   display: block;
-  margin-top: -28px;
+  margin-top: -35px;
   margin-right: 10px;
   padding: 3px;
   width: 10%;
@@ -612,8 +621,8 @@ input:-ms-input-placeholder {
   margin-top: 20px;
   height: 110px;
   position: relative;
-  top: 270px;
-  width:auto;
+  top: 28px;
+  width: auto;
   border-top: 1px solid gray;
 }
 

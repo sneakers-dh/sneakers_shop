@@ -17,8 +17,10 @@
 
         <header>
           <div class="encabezado">
-            <input class="flexsearch--input" type="search" placeholder="Busca un producto">
-            <input class="flexsearch--submit" type="submit" value="&#10140;"/>
+            <form class="" action="products" method="get">
+              <input class="flexsearch--input" name="name" type="search" placeholder="Busca un producto">
+              <input class="flexsearch--submit" type="submit" value="&#10140;"/>
+            </form>
             <div>
               @if (Auth::check())
                 <a href="/home" class="logo"><img src="/images/logosneakers.png"/></a>
@@ -120,26 +122,31 @@
 
                 @forelse($products as $product)
                   <div class="cuerpo">
-                    <img class="imgproducto" src="" alt="">
+                    @forelse($product->images as $image)
+                    <img src="/content/{{ $image->src }}" alt="{{ $product->name }}" class="imgproducto" />
+                    @empty
+                      <img class="imgproducto" src="" alt="">
+                    @endforelse
                     <p class="tituloproducto"><a href="/products/{{$product->id}}">{{ $product->name }}</a></p>
                     <p class="precioproducto">${{ $product->price }}</p>
                     <p class="categoriaproducto">Categoria: {{ $product->category->value }}</p>
-                    <p class="material">Materiales: {{ $product->materials()->pluck('value')->implode(', ') }}</p>
+
                     <a href="/products/{{$product->id}}" class="masinformacion">Ver detalles</a>
 
                     <button type="button" name="Editar" class="botonproducto">Comprar</button>
 
-                @empty
-                  <h3 style="margin-left: 88px;">No hay productos cargados</h3>
-                @endforelse
+                    @empty
+                      <h3 style="margin-left: 88px;">No hay productos cargados</h3>
+                    @endforelse
 
-                
-              </div>
+                    {{ $products->render() }}
+                  </div>
 
 
 
           <!-- pie de pagina -->
             <footer class="pie">
+              <div>
               <ul>
                 <span style="font-size: 15px; float: left; margin-top: 4px;color: black;">&copy; 2016 SneakerShop.com</span>
                 @if (Auth::check())
@@ -152,6 +159,7 @@
                 <a target="_blank" href="https://twitter.com/"><img src="/images/index/icon-twitter.ico" class="icon-twitter"/></a>
                 <a target="_blank" href="https://www.facebook.com/"><img src="/images/index/icon-facebook.ico" class="icon-facebook"/></a>
               </ul>
+            </div>
             </footer>
 
             <!-- esto va aca abajo para que primero se cargue toda la estructura de la pagina junto con el css si es que tiene y despues cargen los script -->

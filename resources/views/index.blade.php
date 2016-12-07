@@ -16,8 +16,10 @@
 
         <header>
           <div class="encabezado">
-            <input class="flexsearch--input" type="search" placeholder="Busca un producto">
-            <input class="flexsearch--submit" type="submit" value="&#10140;"/>
+            <form class="" action="products" method="get">
+              <input class="flexsearch--input" name="name" type="search" placeholder="Busca un producto">
+              <input class="flexsearch--submit" type="submit" value="&#10140;"/>
+            </form>
             <div>
               <a href="/" class="logo"><img src="/images/logosneakers.png"/></a>
             </div>
@@ -90,82 +92,81 @@
     				 <!-- CATEGORIAS -->
              <div class="container-categoria" style="display: none;">
     		       <div class="categoria">
-
     		         <div class="zapatillas">
     		           <p class="titulo"><a href="products/zapatillas" style="color: white;">Zapatillas</a></p>
     		           <ul class="lista">
-                     <li><a href="#">Goma</a></li>
-    		             <li><a href="#">Gamuza</a></li>
-    		             <li><a href="#">Cuero</a></li>
-                     <li><a href="#">Cuerina</a></li>
-                     <li><a href="#">Algodon</a></li>
-                     <li><a href="#">Lona</a></li>
-                     <li><a href="#">Malla</a></li>
+                     <li><a href="products/zapatillas/goma">Goma</a></li>
+    		             <li><a href="products/zapatillas/gamuza">Gamuza</a></li>
+    		             <li><a href="products/zapatillas/cuero">Cuero</a></li>
+                     <li><a href="products/zapatillas/cuerina">Cuerina</a></li>
+                     <li><a href="products/zapatillas/algodon">Algodon</a></li>
+                     <li><a href="products/zapatillas/lona">Lona</a></li>
+                     <li><a href="products/zapatillas/malla">Malla</a></li>
     		           </ul>
     		         </div>
 
     		         <div class="zapatos">
     		           <p class="titulo"><a href="products/zapatos" style="color: white;">Zapatos</a></p>
     		           <ul class="lista">
-    		             <li><a href="#">Goma</a></li>
-    		             <li><a href="#">Gamuza</a></li>
-    		             <li><a href="#">Cuero</a></li>
-                     <li><a href="#">Cuerina</a></li>
-                     <li><a href="#">Algodon</a></li>
-                     <li><a href="#">Lona</a></li>
-                     <li><a href="#">Malla</a></li>
+                     <li><a href="products/zapatos/goma">Goma</a></li>
+    		             <li><a href="products/zapatos/gamuza">Gamuza</a></li>
+    		             <li><a href="products/zapatos/cuero">Cuero</a></li>
+                     <li><a href="products/zapatos/cuerina">Cuerina</a></li>
+                     <li><a href="products/zapatos/algodon">Algodon</a></li>
+                     <li><a href="products/zapatos/lona">Lona</a></li>
+                     <li><a href="products/zapatos/malla">Malla</a></li>
     		           </ul>
     		         </div>
 
     		         <div class="deportes">
     		          <p class="titulo"><a href="products/ojotas" style="color: white;">Ojotas</a></p>
     		          <ul class="lista">
-                    <li><a href="#">Goma</a></li>
-                    <li><a href="#">Gamuza</a></li>
-                    <li><a href="#">Cuero</a></li>
-                    <li><a href="#">Cuerina</a></li>
-                    <li><a href="#">Algodon</a></li>
-                    <li><a href="#">Lona</a></li>
-                    <li><a href="#">Malla</a></li>
+                    <li><a href="products/ojotas/goma">Goma</a></li>
+                    <li><a href="products/ojotas/gamuza">Gamuza</a></li>
+                    <li><a href="products/ojotas/cuero">Cuero</a></li>
+                    <li><a href="products/ojotas/cuerina">Cuerina</a></li>
+                    <li><a href="products/ojotas/algodon">Algodon</a></li>
+                    <li><a href="products/ojotas/lona">Lona</a></li>
+                    <li><a href="products/ojotas/malla">Malla</a></li>
     		          </ul>
     		         </div>
 
     		         <div class="moda">
     		          <p class="titulo"><a href="products/sandalias" style="color: white;">Sandalias</a></p>
     		          <ul class="lista">
-                    <li><a href="#">Goma</a></li>
-                    <li><a href="#">Gamuza</a></li>
-                    <li><a href="#">Cuero</a></li>
-                    <li><a href="#">Cuerina</a></li>
-                    <li><a href="#">Algodon</a></li>
-                    <li><a href="#">Lona</a></li>
-                    <li><a href="#">Malla</a></li>
+                    <li><a href="products/sandalias/goma">Goma</a></li>
+                    <li><a href="products/sandalias/gamuza">Gamuza</a></li>
+                    <li><a href="products/sandalias/cuero">Cuero</a></li>
+                    <li><a href="products/sandalias/cuerina">Cuerina</a></li>
+                    <li><a href="products/sandalias/algodon">Algodon</a></li>
+                    <li><a href="products/sandalias/lona">Lona</a></li>
+                    <li><a href="products/sandalias/malla">Malla</a></li>
     		          </ul>
     		         </div>
 
     		         <div class="running">
     		           <p class="titulo"><a href="products/botas" style="color: white;">Botas</a></p>
     		           <ul class="lista">
-                     <li><a href="#">Goma</a></li>
-    		             <li><a href="#">Gamuza</a></li>
-    		             <li><a href="#">Cuero</a></li>
-                     <li><a href="#">Cuerina</a></li>
-                     <li><a href="#">Algodon</a></li>
-                     <li><a href="#">Lona</a></li>
-                     <li><a href="#">Malla</a></li>
+                     <li><a href="products/botas/goma">Goma</a></li>
+    		             <li><a href="products/botas/gamuza">Gamuza</a></li>
+    		             <li><a href="products/botas/cuero">Cuero</a></li>
+                     <li><a href="products/botas/cuerina">Cuerina</a></li>
+                     <li><a href="products/botas/algodon">Algodon</a></li>
+                     <li><a href="products/botas/lona">Lona</a></li>
+                     <li><a href="products/botas/malla">Malla</a></li>
     		           </ul>
     		         </div>
 
                  <div class="running">
     		           <p class="titulo"><a href="products/botines" style="color: white;">Botines</a></p>
     		           <ul class="lista">
-                     <li><a href="#">Goma</a></li>
-    		             <li><a href="#">Gamuza</a></li>
-    		             <li><a href="#">Cuero</a></li>
-                     <li><a href="#">Cuerina</a></li>
-                     <li><a href="#">Algodon</a></li>
-                     <li><a href="#">Lona</a></li>
-                     <li><a href="#">Malla</a></li>
+                     <li><a href="products/botines/goma">Goma</a></li>
+    		             <li><a href="products/botines/gamuza">Gamuza</a></li>
+    		             <li><a href="products/botines/cuero">Cuero</a></li>
+                     <li><a href="products/botines/cuerina">Cuerina</a></li>
+                     <li><a href="products/botines/algodon">Algodon</a></li>
+                     <li><a href="products/botines/lona">Lona</a></li>
+                     <li><a href="products/botines/malla">Malla</a></li>
     		           </ul>
     		         </div>
 
@@ -210,7 +211,13 @@
         <div class="ultimas-publicaciones">
           @forelse ($zapatillas as $zapatilla)
             <div class="seccion" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px">
-              <img src="" class="imagen-seccion" />
+              @forelse($zapatilla->images as $image)
+              <img src="/content/{{ $image->src }}" alt="{{ $zapatilla->name }}" class="imagen-seccion" />
+              @empty
+                <h4 style="margin-bottom: 110px;text-align:center;">
+                  No hay imágen cargada.
+                </h4>
+              @endforelse
               <p class="titulos-imagen"><a href="/products/{{$zapatilla->id}}">{{ $zapatilla->name}}</a></p>
               <p class="precio">${{ $zapatilla->price }}</p>
             </div>
@@ -228,7 +235,13 @@
         <div class="ultimas-publicaciones">
         @forelse ($zapatos as $zapato)
           <div class="seccion" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px">
-            <img src="" class="imagen-seccion" />
+            @forelse($zapato->images as $image)
+            <img src="/content/{{ $image->src }}" alt="{{ $zapato->name }}" class="imagen-seccion" />
+            @empty
+              <h4 style="margin-bottom: 110px;text-align:center;">
+                No hay imágen cargada.
+              </h4>
+            @endforelse
             <p class="titulos-imagen"><a href="/products/{{$zapato->id}}">{{ $zapato->name}}</a></p>
             <p class="precio">${{ $zapato->price }}</p>
           </div>
@@ -246,7 +259,13 @@
         <div class="ultimas-publicaciones">
         @forelse ($ojotas as $ojota)
           <div class="seccion" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px">
-            <img src="" class="imagen-seccion" />
+            @forelse($ojota->images as $image)
+            <img src="/content/{{ $image->src }}" alt="{{ $ojota->name }}" class="imagen-seccion" />
+            @empty
+              <h4 style="margin-bottom: 110px;text-align:center;">
+                No hay imágen cargada.
+              </h4>
+            @endforelse
             <p class="titulos-imagen"><a href="/products/{{$ojota->id}}">{{ $ojota->name}}</a></p>
             <p class="precio">${{ $ojota->price }}</p>
           </div>
@@ -264,7 +283,13 @@
         <div class="ultimas-publicaciones">
         @forelse ($sandalias as $sandalia)
           <div class="seccion" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px">
-            <img src="" class="imagen-seccion" />
+            @forelse($sandalia->images as $image)
+            <img src="/content/{{ $image->src }}" alt="{{ $sandalia->name }}" class="imagen-seccion" />
+            @empty
+              <h4 style="margin-bottom: 110px;text-align:center;">
+                No hay imágen cargada.
+              </h4>
+            @endforelse
             <p class="titulos-imagen"><a href="/products/{{$sandalia->id}}">{{ $sandalia->name}}</a></p>
             <p class="precio">${{ $sandalia->price }}</p>
           </div>
@@ -282,7 +307,13 @@
         <div class="ultimas-publicaciones">
         @forelse ($botas as $bota)
           <div class="seccion" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px">
-            <img src="" class="imagen-seccion" />
+            @forelse($bota->images as $image)
+            <img src="/content/{{ $image->src }}" alt="{{ $bota->name }}" class="imagen-seccion" />
+            @empty
+              <h4 style="margin-bottom: 110px;text-align:center;">
+                No hay imágen cargada.
+              </h4>
+            @endforelse
             <p class="titulos-imagen"><a href="/products/{{$bota->id}}">{{ $bota->name}}</a></p>
             <p class="precio">${{ $bota->price }}</p>
           </div>
@@ -300,7 +331,13 @@
         <div class="ultimas-publicaciones">
         @forelse ($botines as $botin)
           <div class="seccion" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px">
-            <img src="" class="imagen-seccion" />
+            @forelse($botin->images as $image)
+            <img src="/content/{{ $image->src }}" alt="{{ $botin->name }}" class="imagen-seccion" />
+            @empty
+              <h4 style="margin-bottom: 110px;text-align:center;">
+                No hay imágen cargada.
+              </h4>
+            @endforelse
             <p class="titulos-imagen"><a href="/products/{{$botin->id}}">{{ $botin->name}}</a></p>
             <p class="precio">${{ $botin->price }}</p>
           </div>

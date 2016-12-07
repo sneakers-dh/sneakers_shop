@@ -15,9 +15,11 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-      $products = Product::visibles()->orderBy('id', 'DESC')->get();
+      //dd($request->get('product'));
+
+      $products = Product::name($request->get('name'))->visibles()->orderBy('id', 'DESC')->paginate(10);
       return view('products.index', compact('products'));
     }
 
@@ -43,6 +45,7 @@ class ProductsController extends Controller
     {
       $product = \Auth::user()->products()->create($request->all());
       $product->materials()->sync($request->input('materials'));
+      $this->images($request, $product->id);
       return redirect('products');
     }
 
@@ -92,6 +95,13 @@ class ProductsController extends Controller
      */
     public function destroy(Product $product)
     {
+      foreach ($product->images as $image) {
+          //borrar los archivo imagen
+          \Storage::delete($image->src);
+          //borrar las filas imagen
+          $image->delete();
+      };
+
       $product->visible = 0;
       $product->save();
 

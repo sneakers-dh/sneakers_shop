@@ -42,73 +42,62 @@
                 <li><a href="/home">Home</a></li>
                 <li><a href="/ayuda" target="new" class="faq">Ayuda</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        {{ Auth::user()->name }} <span class="caret"></span>
-                    </a>
-
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> {{ Auth::user()->name }} <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu" style="margin-top: 4px; margin-left: -42px">
                         <li><a href="/products/create" style="background-color:white;">Vender Ahora</a></li>
-                            <li role="presentation" class="divider" style="display: block;"></li>
+                        <li role="presentation" class="divider" style="display: block;"></li>
                         <li><a href="/publicaciones" style="background-color: white;">Mis Publicaciones</a></li>
-                            <li role="presentation" class="divider" style="display: block;"></li>
+                        <li role="presentation" class="divider" style="display: block;"></li>
                         <li>
                           <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                               {{ csrf_field() }}
                           </form>
-                            <a href="{{ url('/logout') }}" style="background-color: white;"
-                                onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                                Logout
-                            </a>
+                            <a href="{{ url('/logout') }}" style="background-color: white;" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                         </li>
-
                     </ul>
                 </li>
               @else
-                <li><a href="ayuda" target="new" class="faq">Ayuda</a></li>
+                <li><a href="/ayuda" target="new" class="faq">Ayuda</a></li>
               @endif
-
             </ul>
           </div>
         </header>
 
-      <div class="contenedor-show">
-        <div class="contenedor-imagen">
-        @forelse($product->images as $image)
-          <div class="col-md-6">
-            <img src="/content/{{ $image->src }}" alt="{{ $product->name }}" class="img-responsive" />
+          <div class="contenedor-show">
+            <div class="contenedor-imagen">
+            @forelse($product->images as $image)
+                <img src="/content/{{ $image->src }}" alt="{{ $product->name }}" class="img-seccion" />
+            @empty
+              <h4 style="text-align: center; position: relative; top: 140px;">
+                No hay imágenes cargadas.
+              </h4>
+            @endforelse
+              <div class="categorias">
+                <h4 style="margin-top:4px; margin-left: 10px">Categoría</h4>
+                <p style="margin-left: 10px">{{ $product->category->value }}</p>
+              </div>
+            </div>
+            <div class="contenedor-titulo-precio">
+              <h1>{{ $product->name }}</h1>
+              <h3>${{ $product->price }}</h3>
+            </div>
+            <div class="descripcion">
+              <h3 style="margin-top: -10px;">Descripción</h3>
+              <p>{{ $product->description }}</p>
+            </div>
+            <div class="materiales">
+              <h4 style="margin-top: 18px; margin-left: 4px">Materiales</h4>
+              <ul>
+                @foreach($product->materials as $material)
+                  <li>{{ $material->value }}</li>
+                @endforeach
+              </ul>
+            </div>
           </div>
-        @empty
-          <h4 style="text-align: center; position: relative; top: 140px;">
-            No hay imágenes cargadas.
-          </h4>
-        @endforelse
-          <div class="categorias">
-            <h4 style="margin-top:4px; margin-left: 10px">Categoría</h4>
-            <p style="margin-left: 10px">{{ $product->category->value }}</p>
-          </div>
-        </div>
-        <div class="contenedor-titulo-precio">
-          <h1>{{ $product->name }}</h1>
-          <h3>${{ $product->price }}</h3>
-        </div>
-        <div class="descripcion">
-          <h3 style="margin-top: -10px;">Descripción</h3>
-          <p>{{ $product->description }}</p>
-        </div>
-        <div class="materiales">
-          <h4 style="margin-top: 18px; margin-left: 4px">Materiales</h4>
-          <ul>
-            @foreach($product->materials as $material)
-              <li>{{ $material->value }}</li>
-            @endforeach
-          </ul>
-        </div>
-      </div>
 
-      <p>
-        <a style="color: black;" href="/products">Volver a la lista de productos</a>
-      </p>
+          <p>
+            <a style="color: black;" href="/products">Volver a la lista de productos</a>
+          </p>
 
 
         <!-- pie de pagina -->
@@ -129,5 +118,5 @@
 
           <!-- esto va aca abajo para que primero se cargue toda la estructura de la pagina junto con el css si es que tiene y despues cargen los script -->
           <script src="/js/llamadas.js"></script>
-</body>
+ </body>
 </html>
